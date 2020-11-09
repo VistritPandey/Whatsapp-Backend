@@ -1,6 +1,7 @@
 import express from 'express'
 
 const app = express()
+const port = process.env.PORT || 9000
 
 
 
@@ -15,5 +16,6 @@ const app = express()
 
 
 
+app.get('/',(req,res)=>res.status(200).send('testing'));
 
-app.get('/',(req,res)=>res.status(200).send('testing'))
+app.listen(port,()=>console.log(`Listening on Localhost:${port}`));
